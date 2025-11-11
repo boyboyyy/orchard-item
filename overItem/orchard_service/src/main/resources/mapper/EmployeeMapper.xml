@@ -2,15 +2,43 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.orchard.mapper.EmployeeMapper">
+
+        <insert id="inserUser" parameterType="com.orchard.entity.User"
+                useGeneratedKeys="true" keyProperty="id">
+            INSERT INTO user ( name,no,password,phone,sex,create_time,update_time,isValid
+            ) VALUES (#{name},#{no},#{password},#{phone},#{sex},#{createTime},#{updateTime},#{isValid})
+        </insert>
+
+    <update id="userUpdate" parameterType="com.orchard.entity.User">
+        update  user
+        <set>
+            <if test="no != null">no = #{no},</if>
+            <if test="name != null">name = #{name},</if>
+            <if test="password != null ">password = #{password},</if>
+            <if test="phone != null ">phone = #{phone},</if>
+            <if test="sex != null ">sex = #{sex},</if>
+            <if test="updateTime != null ">update_time = #{updateTime},</if>
+            <if test="updateUser != null ">update_user = #{updateUser},</if>
+            <if test="isValid != null ">isValid = #{isValid},</if>
+        </set>
+        where id = #{id}
+    </update>
     <select id="pageQuery" resultType="com.orchard.entity.User">
         select * from user
         <where>
             <if test="name != null and name != ''">
-                and name like concat('%',{name},'%')
+                and name like concat('%',#{name},'%')
+            </if>
+            <if test="sex != null and sex != ''">
+                and sex like concat('%',#{sex},'%')
+            </if>
+            <if test="roleId != null and roleId != ''">
+                and role_id like concat('%',#{roleId},'%')
             </if>
         </where>
         order by create_time desc
     </select>
+
 
 
 </mapper>

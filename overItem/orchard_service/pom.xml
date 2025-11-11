@@ -13,6 +13,11 @@
     <artifactId>orchard-service</artifactId>
     <packaging>jar</packaging>  <!-- 子模块可以是jar -->
     <dependencies>
+<!--        fastjson依赖-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
 <!--        分页管理器-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>

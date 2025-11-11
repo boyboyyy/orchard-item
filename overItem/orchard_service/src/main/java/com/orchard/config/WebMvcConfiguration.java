@@ -50,9 +50,9 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     public Docket docketAdmin() {
         log.info("准备生成接口文档。。。");
         ApiInfo apiInfo = new ApiInfoBuilder()
-                .title("Kal苍穹外卖项目接口文档")
+                .title("果园管理项目接口文档")
                 .version("2.1.0")
-                .description("Kal苍穹外卖项目接口文档")
+                .description("果园管理项目接口文档")
                 .build();
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .groupName("管理端接口")

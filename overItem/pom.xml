@@ -28,12 +28,19 @@
         <!-- 定义 Knife4j 版本 -->
         <knife4j.version>3.0.3</knife4j.version>
         <jjwt.version>0.9.1</jjwt.version>
-        <pagehelper>1.3.0</pagehelper>
+        <pagehelper>1.4.7</pagehelper>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
     <dependencyManagement>
 
         <dependencies>
+            <!--        fastjson依赖-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+               <version>${fastjson.version}</version>
+            </dependency>
 <!--            github的分页管理器-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>

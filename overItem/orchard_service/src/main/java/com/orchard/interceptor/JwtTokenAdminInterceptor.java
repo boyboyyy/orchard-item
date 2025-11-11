@@ -1,5 +1,7 @@
 package com.orchard.interceptor;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.orchard.constant.JwtClaimsConstant;
 import com.orchard.properties.JwtProperties;
 import com.orchard.utils.JwtUtil;
@@ -11,8 +13,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 
 import static com.orchard.utils.JwtUtil.parseJWT;
 
@@ -44,7 +50,21 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
 
         //1、从请求头中获取令牌
         String token = request.getHeader(jwtProperties.getAdminTokenName());
-
+        if (token == null) {
+            // 从 cookie 中取 token
+            if (request.getCookies() != null) {
+                for (Cookie cookie : request.getCookies()) {
+                    if (jwtProperties.getAdminTokenName().equals(cookie.getName())) {
+                        // 你的 TOKEN 存的是一个 JSON，要先解析
+                        // 解码 Cookie 的值
+                        String cookieValue = URLDecoder.decode(cookie.getValue(), StandardCharsets.UTF_8.name());
+                        JSONObject jsonObject = JSONObject.parseObject(cookieValue);
+                        token = jsonObject.getString("token");
+                        break;
+                    }
+                }
+            }
+        }
         //2、校验令牌
         try {
             log.info("jwt校验:{}", token);

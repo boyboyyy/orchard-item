@@ -36,12 +36,12 @@ public class User implements Serializable {
     /**
      * 年龄
      */
-    private Integer age;
+    private  String age;
 
     /**
      * 性别：0-未知,1-男,2-女
      */
-    private Integer sex;
+    private String sex;
 
     /**
      * 电话
@@ -68,5 +68,13 @@ public class User implements Serializable {
      * 更新时间
      */
     private LocalDateTime updateTime;
+    /**
+     * 开始创建人
+     */
+    private Long createUser;
+    /**
+     * 修改创建人
+     */
+    private Long updateUser;
 
 }
