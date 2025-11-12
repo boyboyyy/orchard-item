@@ -4,34 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8a5456-6c73-4be4-aaf3-41f17a373dfa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/EmployeeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/EmployeeStartOrStopDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7b8a5456-6c73-4be4-aaf3-41f17a373dfa" name="Changes" comment="解决前端将token存入cookie无法从请求头拿取，完成员工增删改查，完成员工的启动或禁用功能">
+      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/StoagePageQueryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/StorageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/StorageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/StorageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/StorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/StorageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/StorageMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/EmployeePageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/EmployeePageQueryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/dto/EmployeePageQueryDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/dto/EmployeePageQueryDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/config/WebMvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Storage$StorageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Storage$StorageBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Storage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/interceptor/JwtTokenAdminInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/interceptor/JwtTokenAdminInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/config/WebMvcConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/config/WebMvcConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/interceptor/JwtTokenAdminInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/interceptor/JwtTokenAdminInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/mapper/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/mapper/EmployeeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/service/EmployeeService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/service/impl/EmployeeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/target/classes/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/target/classes/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +32,13 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="JavaFXApplication" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="eea9a55b-2e1d-470c-b33b-883ffd4decf7" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -143,8 +130,18 @@
       <workItem from="1762564323135" duration="6705000" />
       <workItem from="1762647593172" duration="11143000" />
       <workItem from="1762740349875" duration="9864000" />
-      <workItem from="1762842743536" duration="7052000" />
+      <workItem from="1762842743536" duration="11110000" />
+      <workItem from="1762908330479" duration="21528000" />
     </task>
+    <task id="LOCAL-00001" summary="解决前端将token存入cookie无法从请求头拿取，完成员工增删改查，完成员工的启动或禁用功能">
+      <option name="closed" value="true" />
+      <created>1762867408805</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762867408805</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +158,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="解决前端将token存入cookie无法从请求头拿取，完成员工增删改查，完成员工的启动或禁用功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决前端将token存入cookie无法从请求头拿取，完成员工增删改查，完成员工的启动或禁用功能" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -168,11 +169,6 @@
           <url>file://$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/EmployeeController.java</url>
           <line>97</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/EmployeeServiceImpl.java</url>
-          <line>112</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

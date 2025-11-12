@@ -70,7 +70,7 @@ public class EmployeeController {
      */
     @GetMapping ("/listPageData")
     @ApiOperation("员工分页查询")
-    public Result<PageResult> page( EmployeePageQueryDTO employeePageQueryDTO){
+    public Result<PageResult> page(EmployeePageQueryDTO employeePageQueryDTO){
         log.info("员工参数",employeePageQueryDTO);
         //实现分页操作
         PageResult pageResult = employeeService.pageQuery(employeePageQueryDTO);

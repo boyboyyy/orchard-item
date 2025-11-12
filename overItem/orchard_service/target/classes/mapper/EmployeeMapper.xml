@@ -30,10 +30,10 @@
                 and name like concat('%',#{name},'%')
             </if>
             <if test="sex != null and sex != ''">
-                and sex like concat('%',#{sex},'%')
+                and sex =  #{sex}
             </if>
             <if test="roleId != null and roleId != ''">
-                and role_id like concat('%',#{roleId},'%')
+                and role_id = #{roleId}
             </if>
         </where>
         order by create_time desc

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.orchard.mapper.StorageMapper">
+    <update id="updateStorage" parameterType="com.orchard.entity.Storage">
+        update storage
+       <set>
+           <if test="name != null and name != ''">name = #{name},</if>
+           <if test="remark != null and remark != '' ">remark = #{remark},</if>
+           <if test="updateTime != null ">update_time = #{updateTime},</if>
+           <if test="updateUser != null and updateUser != '' ">update_user = #{updateUser},</if>
+       </set>
+      where id = #{id}
+    </update>
+    <delete id="stroageDelet">
+        delete from storage
+        <where>
+            and id = #{id}
+        </where>
+    </delete>
+
+    <select id="storagePageQuery" resultType="com.orchard.entity.Storage">
+        select * from storage
+        <where>
+            <if test="name != null and name != ''">
+              and name like concat('%',#{name},'%')
+            </if>
+        </where>
+        order by create_time desc
+    </select>
+</mapper>
