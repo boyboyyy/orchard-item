@@ -4,23 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8a5456-6c73-4be4-aaf3-41f17a373dfa" name="Changes" comment="解决前端将token存入cookie无法从请求头拿取，完成员工增删改查，完成员工的启动或禁用功能">
-      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/StoagePageQueryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/StorageDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/StorageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/StorageMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/StorageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/StorageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/StorageMapper.xml" afterDir="false" />
+    <list default="true" id="7b8a5456-6c73-4be4-aaf3-41f17a373dfa" name="Changes" comment="完成货物的增删改查功能">
+      <change afterPath="$PROJECT_DIR$/../.idea/overItem.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/GoodStyleDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/GoodStylePageQueryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/TreeInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/WeatherStartLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/treeEventRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/GoodStyleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/GoodStyleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/GoodStyleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/GoodStyleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/GoodStyleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Storage$StorageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Storage$StorageBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Storage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/target/classes/com/orchard/service/impl/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_service/target/classes/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/target/classes/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/Goodstype.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/Goodstype.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Goodstype$GoodstypeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Goodstype$GoodstypeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Goodstype.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Goodstype.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,7 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/桌面/overItem/overItem/orchard_service/src/main/resources/mapper&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -131,7 +132,10 @@
       <workItem from="1762647593172" duration="11143000" />
       <workItem from="1762740349875" duration="9864000" />
       <workItem from="1762842743536" duration="11110000" />
-      <workItem from="1762908330479" duration="21528000" />
+      <workItem from="1762908330479" duration="21633000" />
+      <workItem from="1763001862542" duration="3338000" />
+      <workItem from="1763088549529" duration="9284000" />
+      <workItem from="1763170321416" duration="6065000" />
     </task>
     <task id="LOCAL-00001" summary="解决前端将token存入cookie无法从请求头拿取，完成员工增删改查，完成员工的启动或禁用功能">
       <option name="closed" value="true" />
@@ -141,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762867408805</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成仓库的增删改查功能">
+      <option name="closed" value="true" />
+      <created>1762960892454</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762960892454</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +172,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="解决前端将token存入cookie无法从请求头拿取，完成员工增删改查，完成员工的启动或禁用功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决前端将token存入cookie无法从请求头拿取，完成员工增删改查，完成员工的启动或禁用功能" />
+    <MESSAGE value="完成仓库的增删改查功能" />
+    <MESSAGE value="完成货物的增删改查功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成货物的增删改查功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

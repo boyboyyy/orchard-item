@@ -12,25 +12,18 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Goodstype implements Serializable {
+public class TreeInfo implements Serializable {
     private Long id;
-    private String name;
+    private Long areaId;
+    private Long typeId;
+    private LocalDateTime plantDate;
+    private String healthStatus;
     private String remark;
+
     /**
      * 创建时间
      */
     private LocalDateTime createTime;
 
-    /**
-     * 更新时间
-     */
-    private LocalDateTime updateTime;
-    /**
-     * 开始创建人
-     */
-    private Long createUser;
-    /**
-     * 修改创建人
-     */
-    private Long updateUser;
+
 }
