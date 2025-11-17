@@ -7,7 +7,6 @@ import com.orchard.dto.GoodStyleDTO;
 import com.orchard.dto.GoodStylePageQueryDTO;
 import com.orchard.entity.Goods;
 import com.orchard.entity.Goodstype;
-import com.orchard.entity.Storage;
 import com.orchard.mapper.GoodStyleMapper;
 import com.orchard.result.PageResult;
 import com.orchard.service.GoodStyleService;
@@ -31,22 +30,23 @@ public class GoodStyleServiceImpl implements GoodStyleService {
     @Override
     public PageResult goodStylePageQuery(GoodStylePageQueryDTO goodStylePageQueryDTO) {
          PageHelper.startPage(goodStylePageQueryDTO.getPageNumber(), goodStylePageQueryDTO.getPageSize() );
-         Page<Goods> page = goodStyleMapper.goodsPageQusery(goodStylePageQueryDTO);
+         Page<Goodstype> page = goodStyleMapper.goodsPageQusery(goodStylePageQueryDTO);
          long total = page.getTotal();
-         List<Goods> records = page.getResult();
+         List<Goodstype> records = page.getResult();
          //返回给前端
         return new PageResult(total,records) ;
     }
 
     /**
      * 根据货物分类id查询货物分裂
+     *
      * @param id
      * @return
      */
     @Override
-    public Goods goodStyleById(Long id) {
-      Goods goods =   goodStyleMapper.goodStyleById(id);
-        return goods;
+    public Goodstype goodStyleById(Long id) {
+      Goodstype goodstype =   goodStyleMapper.goodStyleById(id);
+        return goodstype;
     }
 
     /**
@@ -71,7 +71,8 @@ public class GoodStyleServiceImpl implements GoodStyleService {
         Goodstype goodstype = new Goodstype();
 
         BeanUtils.copyProperties(goodStyleDTO,goodstype);
-
+        goodstype.setCreateTime(LocalDateTime.now());
+        goodstype.setCreateUser(BaseContext.getCurrentId());
         goodStyleMapper.addgoodStyle(goodstype);
     }
 

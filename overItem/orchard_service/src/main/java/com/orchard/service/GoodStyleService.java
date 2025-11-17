@@ -3,6 +3,7 @@ package com.orchard.service;
 import com.orchard.dto.GoodStyleDTO;
 import com.orchard.dto.GoodStylePageQueryDTO;
 import com.orchard.entity.Goods;
+import com.orchard.entity.Goodstype;
 import com.orchard.result.PageResult;
 import org.apache.ibatis.annotations.Insert;
 
@@ -17,10 +18,11 @@ public interface GoodStyleService {
 
     /**
      * 根据货物分类id查询货物分裂
+     *
      * @param id
      * @return
      */
-    Goods goodStyleById(Long id);
+    Goodstype goodStyleById(Long id);
 
     /**
      * 根据货物数据更新货物

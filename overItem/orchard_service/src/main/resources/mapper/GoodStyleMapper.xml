@@ -18,7 +18,7 @@
                     and id = #{id}
                 </where>
     </delete>
-    <select id="goodsPageQusery" resultType="com.orchard.entity.Goods">
+    <select id="goodsPageQusery" resultType="com.orchard.entity.Goodstype">
         select * from goodstype
                 <where>
                     <if test="name != null and name != ''">

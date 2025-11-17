@@ -18,7 +18,7 @@ public interface GoodStyleMapper {
      * @param goodStylePageQueryDTO
      * @return
      */
-    Page<Goods> goodsPageQusery(GoodStylePageQueryDTO goodStylePageQueryDTO);
+    Page<Goodstype> goodsPageQusery(GoodStylePageQueryDTO goodStylePageQueryDTO);
 
     /**
      * 货物分类的修改
@@ -32,7 +32,7 @@ public interface GoodStyleMapper {
      * @return
      */
     @Select("select * from goodstype where id = #{id}")
-    Goods goodStyleById(Long id);
+    Goodstype goodStyleById(Long id);
 
     /**
      * 根据id删除货物分类
@@ -44,7 +44,7 @@ public interface GoodStyleMapper {
      * 货物新增
      * @param goodstype
      */
-    @Insert("INSERT INTO goodstype  (id,name,remark,create_time,update_time)"
-            + "values" + "(#{id},#{name},#{remark},#{createTime}，#{updateTime}) ")
+    @Insert("INSERT INTO goodstype  (id,name,remark,create_time,create_user)"
+            + "values" + "(#{id},#{name},#{remark},#{createTime},#{createUser}) ")
     void addgoodStyle(Goodstype goodstype);
 }

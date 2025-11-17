@@ -4,6 +4,7 @@ import com.orchard.dto.GoodStyleDTO;
 import com.orchard.dto.GoodStylePageQueryDTO;
 import com.orchard.dto.StorageDTO;
 import com.orchard.entity.Goods;
+import com.orchard.entity.Goodstype;
 import com.orchard.entity.Storage;
 import com.orchard.result.PageResult;
 import com.orchard.result.Result;
@@ -39,10 +40,10 @@ public class GoodStyleController {
     }
     @ApiOperation("根据货物分类id查询货物分类数据")
     @GetMapping("/{id}")
-    public Result<Goods> goodStyleById(@PathVariable Long id){
+    public Result<Goodstype> goodStyleById(@PathVariable Long id){
         log.info("货物种类id",id);
-        Goods goods  = goodStyleService.goodStyleById(id);
-        return Result.success(goods);
+        Goodstype goodstype  = goodStyleService.goodStyleById(id);
+        return Result.success(goodstype);
     }
     @ApiOperation("修改货物分类信息")
     @PutMapping("/mod")
