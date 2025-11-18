@@ -30,12 +30,8 @@ public interface GoodService {
      * 根据货物数据更新货物
      * @param goodDTO
      */
-    void goodUpdate(GoodDTO goodDTO);
+//    void goodUpdate(GoodDTO goodDTO);
 
-    /**
-     * 货物分类新增货物
-     * @param goodDTO
-     */
 
 
 
@@ -49,5 +45,5 @@ public interface GoodService {
      * 货物新增
      * @param goodDTO
      */
-    void addgood(GoodDTO goodDTO);
+//    void addgood(GoodDTO goodDTO);
 }

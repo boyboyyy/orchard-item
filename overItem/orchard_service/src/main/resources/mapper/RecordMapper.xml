@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.orchard.mapper.RecordMapper">
+
+    <select id="page" resultType="com.orchard.vo.RecordPageVo">
+        select r.id,g.name goodsName,s.name storageName,gs.name goodstypeName,r.count,r.remark,r.create_time,
+               (select u.name from user u where u.id = r.userId) userName,
+               (select u.name from user u where u.id = r.admin_id) adminName
+        from record r ,goods g,goodsType gs ,storage s
+        <where>
+            r.goods = g.id
+            and g.storage = s.id
+            and g.goodsType = gs.id
+            <if test="goods != null and goods != ''">
+                and g.name like concat('%',#{goods},'%')
+            </if>
+            <if test="goodsTypeName != null and goodsTypeName != ''">
+                and gs.name =  #{goodsTypeName}
+            </if>
+            <if test="storageName != null and storageName != ''">
+                and s.name = #{storageName}
+            </if>
+        </where>
+    </select>
+</mapper>

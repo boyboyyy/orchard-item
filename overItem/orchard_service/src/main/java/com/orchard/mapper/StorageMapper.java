@@ -10,6 +10,12 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface StorageMapper {
     /**
+     * 通过货物姓名查找仓库id
+     *
+     * @return
+     */
+//    Integer goodsByName(String name);
+    /**
      * 仓库分页
      * @param stoagePageQueryDTO
      * @return

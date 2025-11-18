@@ -27,7 +27,11 @@
                 </where>
                 order by create_time desc
     </select>
-
+<!--    <select id="goodStypeIdBygoodName" resultType="java.lang.Integer">-->
+<!--        select gs.id from goodstype gs-->
+<!--            left join goods g ON g.goodsType = gs.id-->
+<!--        where gs.name = #{name}-->
+<!--    </select>-->
 
 
 </mapper>

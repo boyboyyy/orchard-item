@@ -41,21 +41,21 @@ public class GoodController {
         GoodsFixVo goodsFixVo  = goodService.goodById(id);
         return Result.success(goodsFixVo);
     }
-    @ApiOperation("修改货物信息")
-    @PutMapping("/mod")
-    public Result goodUpdate(@RequestBody GoodDTO goodDTO){
-        log.info("仓库信息",goodDTO);
-        goodService.goodUpdate(goodDTO);
-        return Result.success();
-    }
-
-    @ApiOperation("货物新增功能")
-    @PostMapping("/addGood")
-    public  Result addgoodStyle(@RequestBody GoodDTO goodDTO){
-        log.info("goodDTO",goodDTO);
-        goodService.addgood(goodDTO);
-        return  Result.success();
-    }
+//    @ApiOperation("修改货物信息")
+//    @PutMapping("/mod")
+//    public Result goodUpdate(@RequestBody GoodDTO goodDTO){
+//        log.info("仓库信息",goodDTO);
+//        goodService.goodUpdate(goodDTO);
+//        return Result.success();
+//    }
+//
+//    @ApiOperation("货物新增功能")
+//    @PostMapping("/addGood")
+//    public  Result addgoodStyle(@RequestBody GoodDTO goodDTO){
+//        log.info("goodDTO",goodDTO);
+//        goodService.addgood(goodDTO);
+//        return  Result.success();
+//    }
     @ApiOperation("货物分类删除功能")
     @GetMapping("/deleteGoodsById/{id}")
     public Result goodStyleDelet(@PathVariable Long id){

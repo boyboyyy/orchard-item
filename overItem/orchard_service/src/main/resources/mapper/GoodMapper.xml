@@ -3,16 +3,19 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.orchard.mapper.GoodMapper">
 
-    <update id="updateGood" parameterType="com.orchard.entity.Goods">
-        update goods
-        <set>
-            <if test="name != null and name != ''">name = #{name},</if>
-            <if test="remark != null and remark != '' ">remark = #{remark},</if>
-            <if test="updateTime != null ">update_time = #{updateTime},</if>
-            <if test="updateUser != null and updateUser != '' ">update_user = #{updateUser},</if>
-        </set>
-        where id = #{id}
-    </update>
+<!--    <update id="updateGood" parameterType="com.orchard.entity.Goods">-->
+<!--        update goods-->
+<!--        <set>-->
+<!--            <if test="name != null and name != ''">name = #{name},</if>-->
+<!--            <if test="remark != null and remark != '' ">remark = #{remark},</if>-->
+<!--            <if test="id != null and id != '' ">id = #{id},</if>-->
+<!--            <if test="storage != null and storage != ''">storage = #{storage},</if>-->
+<!--            <if test="goodsType != null and goodsType != '' ">goodsType = #{goodsType},</if>-->
+<!--            <if test="updateTime != null ">update_time = #{updateTime},</if>-->
+<!--            <if test="updateUser != null and updateUser != '' ">update_user = #{updateUser},</if>-->
+<!--        </set>-->
+<!--        where id = #{id}-->
+<!--    </update>-->
     <delete id="goodDelet">
         delete from goods
         <where>

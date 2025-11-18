@@ -12,6 +12,12 @@ import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface GoodStyleMapper {
+    /**
+     * 通过货物名称获取货物分类id
+     * @param name
+     * @return
+     */
+//    Integer goodStypeIdBygoodName(String name);
 
     /**
      * 货物分类查询

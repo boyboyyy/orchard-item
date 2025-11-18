@@ -15,7 +15,7 @@ public class Goods implements Serializable {
     /**
      * 主键（根据表结构推断）
      */
-    private Integer id;
+    private Long id;
 
     /**
      * 货品名称
@@ -25,12 +25,12 @@ public class Goods implements Serializable {
     /**
      * 仓库/库存地点
      */
-    private String storage;
+    private Integer storage;
 
     /**
      * 货品类型
      */
-    private String goodsType;
+    private Integer goodsType;
 
     /**
      * 库存数量

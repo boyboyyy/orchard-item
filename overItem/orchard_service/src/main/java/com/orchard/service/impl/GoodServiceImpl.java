@@ -7,8 +7,11 @@ import com.orchard.dto.GoodDTO;
 import com.orchard.dto.GoodPageQueryDTO;
 import com.orchard.entity.Goods;
 import com.orchard.mapper.GoodMapper;
+import com.orchard.mapper.GoodStyleMapper;
+import com.orchard.mapper.StorageMapper;
 import com.orchard.result.PageResult;
 import com.orchard.service.GoodService;
+import com.orchard.service.StorageService;
 import com.orchard.vo.GoodsFixVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +24,10 @@ import java.util.List;
 public class GoodServiceImpl implements GoodService {
     @Autowired
     private GoodMapper goodMapper;
-
+//    @Autowired
+//    private StorageMapper storageMapper;
+//    @Autowired
+//    private GoodStyleMapper goodStyleMapper;
     /**
      * 货物分类查询
      *
@@ -54,14 +60,24 @@ public class GoodServiceImpl implements GoodService {
      * 货物分类修改数据
      * @param goodDTO
      */
-    @Override
-    public void goodUpdate(GoodDTO goodDTO) {
-        Goods goods = new Goods();
-        BeanUtils.copyProperties(goodDTO,goods);
-        goods.setUpdateUser(BaseContext.getCurrentId());
-        goods.setUpdateTime(LocalDateTime.now());
-        goodMapper.updateGood(goods);
-    }
+//    @Override
+//    public void goodUpdate(GoodDTO goodDTO) {
+//        //获取仓库的id
+//        Integer storageId =  storageMapper.goodsByName(goodDTO.getStorage());
+//        Integer goodstypeId =  goodStyleMapper.goodStypeIdBygoodName(goodDTO.getGoodsType());
+//
+//        Goods goods = new Goods().builder()
+//                .id(goodDTO.getId())
+//                .name(goodDTO.getName())
+//                .storage(storageId)
+//                .goodsType(goodstypeId)
+//                .createUser(BaseContext.getCurrentId())
+//                .createTime(LocalDateTime.now())
+//                .remark(goodDTO.getRemark())
+//                .count(goodDTO.getCount())
+//                .build();
+//        goodMapper.updateGood(goods);
+//    }
 
     /**
      * 货物分裂的删除
@@ -76,12 +92,9 @@ public class GoodServiceImpl implements GoodService {
      * 货物新增
      * @param goodDTO
      */
-    @Override
-    public void addgood(GoodDTO goodDTO) {
-        Goods goods = new Goods();
-        BeanUtils.copyProperties(goodDTO,goods);
-        goods.setCreateTime(LocalDateTime.now());
-        goods.setCreateUser(BaseContext.getCurrentId());
-        goodMapper.addgoodStyle(goods);
-    }
+//    @Override
+//    public void addgood(GoodDTO goodDTO) {
+//
+////        goodMapper.addgood(goods);
+//    }
 }

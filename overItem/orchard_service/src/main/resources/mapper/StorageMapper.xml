@@ -28,4 +28,10 @@
         </where>
         order by create_time desc
     </select>
+    <select id="goodsByName" resultType="java.lang.Integer">
+        select s.id from storage s
+        left join goods g ON g.storage = s.id
+        where s.name = #{name}
+    </select>
+
 </mapper>
