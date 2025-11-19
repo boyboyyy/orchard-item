@@ -7,6 +7,8 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.List;
+
 @Mapper
 public interface StorageMapper {
     /**
@@ -49,4 +51,10 @@ public interface StorageMapper {
      * @param storage
      */
     void updateStorage(Storage storage);
+
+    /**
+     * 返回所有仓库信息
+     * @return
+     */
+    List<Storage> pageAll();
 }

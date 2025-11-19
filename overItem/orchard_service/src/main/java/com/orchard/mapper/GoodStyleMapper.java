@@ -10,8 +10,15 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.List;
+
 @Mapper
 public interface GoodStyleMapper {
+    /**
+     * 返回所有货物的数据
+     * @return
+     */
+    List<Goodstype> pageAll();
     /**
      * 通过货物名称获取货物分类id
      * @param name

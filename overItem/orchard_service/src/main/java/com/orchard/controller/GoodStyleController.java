@@ -15,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
 
 @RestController
@@ -24,6 +25,13 @@ import org.springframework.web.bind.annotation.*;
 public class GoodStyleController {
     @Autowired
     private GoodStyleService goodStyleService;
+
+    @ApiOperation("返回所有货物数据")
+    @GetMapping("/list")
+    public Result pageAll(){
+        List<Goodstype> goods =  goodStyleService.pageAll();
+        return Result.success(goods);
+    }
     /**
      * 货物分类查询
      * @param goodStylePageQueryDTO

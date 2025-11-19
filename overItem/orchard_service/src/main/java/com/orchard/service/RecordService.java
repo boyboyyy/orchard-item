@@ -1,5 +1,6 @@
 package com.orchard.service;
 
+import com.orchard.dto.RecordDTO;
 import com.orchard.dto.RecordPageQueryDTO;
 import com.orchard.entity.Record;
 import com.orchard.result.PageResult;
@@ -13,4 +14,10 @@ public interface RecordService {
      */
 
     PageResult recordStypeQuery(RecordPageQueryDTO pageQueryDTO);
+
+    /**
+     * 记录新增数据
+     * @param recordDTO
+     */
+    void recordAdd(RecordDTO recordDTO);
 }

@@ -2,6 +2,7 @@ package com.orchard.service.impl;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.orchard.dto.RecordDTO;
 import com.orchard.dto.RecordPageQueryDTO;
 import com.orchard.entity.Record;
 import com.orchard.mapper.RecordMapper;
@@ -33,5 +34,17 @@ public class RecordServiceImpl implements RecordService {
         long total = page.getTotal();
         List<RecordPageVo> records = page.getResult();
         return new PageResult(total,records);
+    }
+
+    /**
+     * 记录数据新增
+     * @param recordDTO
+     */
+    @Override
+    public void recordAdd(RecordDTO recordDTO) {
+        Record record = new Record();
+        BeanUtils.copyProperties(recordDTO,record);
+        recordMapper.recordAdd(record);
+
     }
 }

@@ -2,6 +2,7 @@ package com.orchard.controller;
 
 import com.orchard.dto.StoagePageQueryDTO;
 import com.orchard.dto.StorageDTO;
+import com.orchard.entity.Goodstype;
 import com.orchard.entity.Storage;
 import com.orchard.result.PageResult;
 import com.orchard.result.Result;
@@ -12,6 +13,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/storage")
@@ -19,6 +22,12 @@ import org.springframework.web.bind.annotation.*;
 public class StorageController {
     @Autowired
     private StorageService storageService;
+    @ApiOperation("返回所有仓库数据")
+    @GetMapping("/list")
+    public Result pageAll(){
+        List<Storage> storages =  storageService.pageAll();
+        return Result.success(storages);
+    }
     /**
      * 员工分页查询
      * @param stoagePageQueryDTO

@@ -32,6 +32,16 @@
 <!--            left join goods g ON g.goodsType = gs.id-->
 <!--        where gs.name = #{name}-->
 <!--    </select>-->
-
+    <select id="pageAll" resultMap="GoodsResultMap">
+        SELECT
+            id, name
+        FROM goodstype
+        ORDER BY create_time DESC
+    </select>
+    <!-- 定义结果映射 -->
+    <resultMap id="GoodsResultMap" type="com.orchard.entity.Goodstype">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+    </resultMap>
 
 </mapper>

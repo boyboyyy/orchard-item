@@ -2,9 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.orchard.mapper.RecordMapper">
+    <insert id="recordAdd">
+        insert into record (admin_id,count,goods,remark,userId) values (#{adminId},#{count},#{goods},#{remark},#{userId})
+    </insert>
 
     <select id="page" resultType="com.orchard.vo.RecordPageVo">
-        select r.id,g.name goodsName,s.name storageName,gs.name goodstypeName,r.count,r.remark,r.create_time,
+        select r.id,g.name as goodsName,s.name as storageName,gs.name as goodstypeName,r.count,r.remark,r.create_time,
                (select u.name from user u where u.id = r.userId) userName,
                (select u.name from user u where u.id = r.admin_id) adminName
         from record r ,goods g,goodsType gs ,storage s

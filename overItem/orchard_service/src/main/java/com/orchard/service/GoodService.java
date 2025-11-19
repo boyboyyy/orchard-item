@@ -6,6 +6,8 @@ import com.orchard.entity.Goods;
 import com.orchard.result.PageResult;
 import com.orchard.vo.GoodsFixVo;
 
+import java.util.List;
+
 public interface GoodService {
     /**
      * 货物分类分页查询
@@ -40,6 +42,8 @@ public interface GoodService {
      * @param id
      */
     void goodDelet(Long id);
+
+
 
     /**
      * 货物新增

@@ -1,6 +1,7 @@
 package com.orchard.controller;
 
 import com.github.pagehelper.PageHelper;
+import com.orchard.dto.RecordDTO;
 import com.orchard.dto.RecordPageQueryDTO;
 import com.orchard.entity.Record;
 import com.orchard.result.PageResult;
@@ -11,6 +12,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,7 +34,19 @@ public class RecordController {
     public Result<PageResult> page (RecordPageQueryDTO pageQueryDTO){
         log.info("pageQueryDto",pageQueryDTO);
         PageResult pageResult = recordService.recordStypeQuery(pageQueryDTO);
-
         return Result.success(pageResult);
+    }
+
+    /**
+     * 货物新增记录
+     * @param recordDTO
+     * @return
+     */
+    @PostMapping("/save")
+    @ApiOperation("货物记录新增")
+    public Result recordAdd(@RequestBody RecordDTO recordDTO){
+        log.info("recorDTO",recordDTO);
+        recordService.recordAdd(recordDTO);
+        return Result.success();
     }
 }

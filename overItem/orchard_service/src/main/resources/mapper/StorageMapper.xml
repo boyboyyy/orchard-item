@@ -34,4 +34,15 @@
         where s.name = #{name}
     </select>
 
+    <select id="pageAll" resultMap="storageResultMap">
+        SELECT
+            id, name
+        FROM storage
+        ORDER BY create_time DESC
+    </select>
+    <!-- 定义结果映射 -->
+    <resultMap id="storageResultMap" type="com.orchard.entity.Storage">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+    </resultMap>
 </mapper>

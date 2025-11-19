@@ -14,4 +14,10 @@ public interface RecordMapper {
      * @return
      */
     Page<RecordPageVo> page(RecordPageQueryDTO recordPageQueryDTO);
+
+    /**
+     * 记录新增数据
+     * @param record
+     */
+    void recordAdd(Record record);
 }

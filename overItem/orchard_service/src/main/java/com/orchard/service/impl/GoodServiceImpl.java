@@ -88,6 +88,8 @@ public class GoodServiceImpl implements GoodService {
         goodMapper.goodDelet(id);
     }
 
+
+
     /**
      * 货物新增
      * @param goodDTO

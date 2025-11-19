@@ -22,9 +22,9 @@ public class GoodPageQueryDTO implements Serializable {
 
     @ApiModelProperty("仓库的名称")
     //每页显示记录数
-    private String storage;
+    private Integer storage;
 
     @ApiModelProperty("货物分类名")
     //每页显示记录数
-    private String goodsType;
+    private Integer goodsType;
 }

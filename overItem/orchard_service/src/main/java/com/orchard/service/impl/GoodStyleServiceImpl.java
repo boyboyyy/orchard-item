@@ -5,7 +5,6 @@ import com.github.pagehelper.PageHelper;
 import com.orchard.context.BaseContext;
 import com.orchard.dto.GoodStyleDTO;
 import com.orchard.dto.GoodStylePageQueryDTO;
-import com.orchard.entity.Goods;
 import com.orchard.entity.Goodstype;
 import com.orchard.mapper.GoodStyleMapper;
 import com.orchard.result.PageResult;
@@ -19,6 +18,16 @@ import java.util.List;
 
 @Service
 public class GoodStyleServiceImpl implements GoodStyleService {
+    /**
+     * 返回所有的货物数据
+     *
+     * @return
+     */
+    @Override
+    public List<Goodstype> pageAll() {
+
+        return goodStyleMapper.pageAll();
+    }
     @Autowired
     private GoodStyleMapper goodStyleMapper;
     /**

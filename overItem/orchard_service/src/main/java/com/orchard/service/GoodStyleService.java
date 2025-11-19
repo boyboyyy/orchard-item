@@ -2,12 +2,18 @@ package com.orchard.service;
 
 import com.orchard.dto.GoodStyleDTO;
 import com.orchard.dto.GoodStylePageQueryDTO;
-import com.orchard.entity.Goods;
 import com.orchard.entity.Goodstype;
 import com.orchard.result.PageResult;
-import org.apache.ibatis.annotations.Insert;
+
+import java.util.List;
 
 public interface GoodStyleService {
+    /**
+     * 返回所有货物的数据
+     *
+     * @return
+     */
+    List<Goodstype> pageAll();
     /**
      * 货物分类分页查询
      *

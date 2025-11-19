@@ -26,7 +26,7 @@ public class Record implements Serializable {
     /**
      * 取货人/补货人
      */
-    private Integer userld;
+    private Integer userId;
 
     /**
      * 操作人id

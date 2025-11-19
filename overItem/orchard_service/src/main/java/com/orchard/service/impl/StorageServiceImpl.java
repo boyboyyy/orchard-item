@@ -20,6 +20,12 @@ import java.util.List;
 public class StorageServiceImpl implements StorageService{
 @Autowired
 private StorageMapper storageMapper;
+
+    @Override
+    public List<Storage> pageAll() {
+        return storageMapper.pageAll();
+    }
+
     /**
      * 员工分页查询
      * @param stoagePageQueryDTO

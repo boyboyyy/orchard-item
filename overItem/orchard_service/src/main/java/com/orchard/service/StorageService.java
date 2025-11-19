@@ -5,8 +5,15 @@ import com.orchard.dto.StorageDTO;
 import com.orchard.entity.Storage;
 import com.orchard.result.PageResult;
 
+import java.util.List;
+
 public interface StorageService {
 
+    /**
+     * 返回所有的仓库数据
+     * @return
+     */
+    List<Storage> pageAll();
 
     /**
      * 员工分页查询

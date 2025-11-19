@@ -4,27 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8a5456-6c73-4be4-aaf3-41f17a373dfa" name="Changes" comment="修改货物的改功能,联表进行数据查询">
-      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/RecordPageQueryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/vo/RecordPageVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/RecordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/RecordMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/RecordService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/RecordServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/RecordMapper.xml" afterDir="false" />
+    <list default="true" id="7b8a5456-6c73-4be4-aaf3-41f17a373dfa" name="Changes" comment="修改货物的改功能,联表进行数据查询.完成记录功能的分页查询功能">
+      <change afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/RecordDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/GoodDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/GoodDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/Goods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Goods$GoodsBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Goods$GoodsBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Goods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/GoodPageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/dto/GoodPageQueryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/src/main/java/com/orchard/entity/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Record.class" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_pojo/target/classes/com/orchard/entity/Record.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/GoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/GoodStyleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/GoodStyleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/RecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/StorageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/GoodMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/GoodMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/GoodStyleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/GoodStyleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/RecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/RecordMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/StorageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/mapper/StorageMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/GoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/GoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/GoodStyleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/GoodStyleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/RecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/StorageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/GoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/GoodServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/GoodStyleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/GoodStyleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/RecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/RecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/StorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/StorageServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/GoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/GoodMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/GoodStyleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/GoodStyleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/RecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/RecordMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/StorageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orchard_service/src/main/resources/mapper/StorageMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +147,8 @@
       <workItem from="1763170321416" duration="6065000" />
       <workItem from="1763259413179" duration="9840000" />
       <workItem from="1763349916153" duration="16199000" />
-      <workItem from="1763432227246" duration="21117000" />
+      <workItem from="1763432227246" duration="21858000" />
+      <workItem from="1763518941376" duration="14845000" />
     </task>
     <task id="LOCAL-00001" summary="解决前端将token存入cookie无法从请求头拿取，完成员工增删改查，完成员工的启动或禁用功能">
       <option name="closed" value="true" />
@@ -169,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763391691643</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改货物的改功能,联表进行数据查询.完成记录功能的分页查询功能">
+      <option name="closed" value="true" />
+      <created>1763467453759</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763467453759</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +204,8 @@
     <MESSAGE value="完成仓库的增删改查功能" />
     <MESSAGE value="完成货物的增删改查功能" />
     <MESSAGE value="修改货物的改功能,联表进行数据查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改货物的改功能,联表进行数据查询" />
+    <MESSAGE value="修改货物的改功能,联表进行数据查询.完成记录功能的分页查询功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改货物的改功能,联表进行数据查询.完成记录功能的分页查询功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -200,6 +214,16 @@
           <url>file://$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/controller/EmployeeController.java</url>
           <line>97</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/RecordServiceImpl.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/orchard_service/src/main/java/com/orchard/service/impl/RecordServiceImpl.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
