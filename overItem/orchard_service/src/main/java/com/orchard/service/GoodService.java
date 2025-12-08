@@ -45,9 +45,10 @@ public interface GoodService {
 
 
 
+
     /**
      * 货物新增
      * @param goodDTO
      */
-//    void addgood(GoodDTO goodDTO);
+    void addgood(GoodDTO goodDTO);
 }

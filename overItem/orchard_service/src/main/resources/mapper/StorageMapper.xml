@@ -40,6 +40,17 @@
         FROM storage
         ORDER BY create_time DESC
     </select>
+    <select id="getStorageName" resultType="java.lang.String">
+        select s.name from storage s
+        <where>
+            <if test="begin != null">
+                and s.create_time &gt; #{begin}
+            </if>
+            <if test="end != null">
+                and s.create_time &lt; #{end}
+            </if>
+        </where>
+    </select>
     <!-- 定义结果映射 -->
     <resultMap id="storageResultMap" type="com.orchard.entity.Storage">
         <id column="id" property="id" />

@@ -30,11 +30,23 @@
         <jjwt.version>0.9.1</jjwt.version>
         <pagehelper>1.4.7</pagehelper>
         <fastjson.version>1.2.83</fastjson.version>
+        <poi>3.16</poi>
     </properties>
 
     <dependencyManagement>
 
         <dependencies>
+            <!--Apache poi -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi}</version>
+            </dependency>
             <!--        fastjson依赖-->
             <dependency>
                 <groupId>com.alibaba</groupId>

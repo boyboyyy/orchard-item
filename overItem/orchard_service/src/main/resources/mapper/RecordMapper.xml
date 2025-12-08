@@ -15,15 +15,31 @@
             r.goods = g.id
             and g.storage = s.id
             and g.goodsType = gs.id
-            <if test="goods != null and goods != ''">
-                and g.name like concat('%',#{goods},'%')
+            <if test="name != null and name != ''">
+                and g.name like concat('%',#{name},'%')
             </if>
-            <if test="goodsTypeName != null and goodsTypeName != ''">
-                and gs.name =  #{goodsTypeName}
+            <if test="goodsType != null and goodsType != ''">
+                and gs.id =  #{goodsType}
             </if>
-            <if test="storageName != null and storageName != ''">
-                and s.name = #{storageName}
+            <if test="storage != null and storage != ''">
+                and s.id = #{storage}
             </if>
         </where>
     </select>
+    <select id="recordByTime" resultType="com.orchard.vo.RecordExcelVo">
+        SELECT
+        g.name as goodsName,
+        s.name as storageName,
+        gs.name as goodstypeName,
+        r.count,
+        r.remark,
+        r.create_time as createTime,
+        (SELECT u.name FROM user u WHERE u.id = r.userId) as userName,
+        (SELECT u.name FROM user u WHERE u.id = r.admin_id) as adminName
+        FROM record r
+        JOIN goods g ON r.goods = g.id
+        JOIN goodsType gs ON g.goodsType = gs.id
+        JOIN storage s ON g.storage = s.id
+    </select>
+
 </mapper>

@@ -90,13 +90,13 @@ public class GoodServiceImpl implements GoodService {
 
 
 
+
     /**
      * 货物新增
      * @param goodDTO
      */
-//    @Override
-//    public void addgood(GoodDTO goodDTO) {
-//
-////        goodMapper.addgood(goods);
-//    }
+    @Override
+    public void addgood(GoodDTO goodDTO) {
+//        goodMapper.addgood(goods);
+    }
 }

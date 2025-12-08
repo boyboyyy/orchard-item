@@ -17,9 +17,9 @@ public class GoodDTO implements Serializable {
     @ApiModelProperty("货物名字")
     private String name;
     @ApiModelProperty("仓库名字")
-    private String storage;
+    private Integer storage;
     @ApiModelProperty("货物分类")
-    private String goodsType;
+    private Integer goodsType;
     @ApiModelProperty("货物数量")
     private Integer count;
 

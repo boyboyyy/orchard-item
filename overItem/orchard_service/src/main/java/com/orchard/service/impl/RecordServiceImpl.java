@@ -5,21 +5,27 @@ import com.github.pagehelper.PageHelper;
 import com.orchard.dto.RecordDTO;
 import com.orchard.dto.RecordPageQueryDTO;
 import com.orchard.entity.Record;
+import com.orchard.mapper.GoodStyleMapper;
 import com.orchard.mapper.RecordMapper;
+import com.orchard.mapper.StorageMapper;
 import com.orchard.result.PageResult;
-import com.orchard.result.Result;
 import com.orchard.service.RecordService;
+import com.orchard.vo.RecordExcelVo;
 import com.orchard.vo.RecordPageVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class RecordServiceImpl implements RecordService {
     @Autowired
     private RecordMapper recordMapper;
+
     /**
      * 货物记录分页的查询
      *
@@ -47,4 +53,6 @@ public class RecordServiceImpl implements RecordService {
         recordMapper.recordAdd(record);
 
     }
+
+
 }

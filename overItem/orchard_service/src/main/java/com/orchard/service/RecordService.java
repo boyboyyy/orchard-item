@@ -2,8 +2,11 @@ package com.orchard.service;
 
 import com.orchard.dto.RecordDTO;
 import com.orchard.dto.RecordPageQueryDTO;
-import com.orchard.entity.Record;
 import com.orchard.result.PageResult;
+import com.orchard.vo.RecordExcelVo;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 public interface RecordService {
     /**
@@ -20,4 +23,6 @@ public interface RecordService {
      * @param recordDTO
      */
     void recordAdd(RecordDTO recordDTO);
+
+
 }

@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface StorageMapper {
@@ -57,4 +58,10 @@ public interface StorageMapper {
      * @return
      */
     List<Storage> pageAll();
+
+    /**
+     * 获取仓库名
+     * @param map
+     */
+    String getStorageName(Map map);
 }

@@ -11,6 +11,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface GoodStyleMapper {
@@ -60,4 +61,11 @@ public interface GoodStyleMapper {
     @Insert("INSERT INTO goodstype  (id,name,remark,create_time,create_user)"
             + "values" + "(#{id},#{name},#{remark},#{createTime},#{createUser}) ")
     void addgoodStyle(Goodstype goodstype);
+
+    /**
+     * 货物类型
+     * @param map
+     * @return
+     */
+    String getGoodsStyleName(Map map);
 }

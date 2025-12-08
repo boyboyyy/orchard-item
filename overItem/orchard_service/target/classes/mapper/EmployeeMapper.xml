@@ -5,8 +5,8 @@
 
         <insert id="inserUser" parameterType="com.orchard.entity.User"
                 useGeneratedKeys="true" keyProperty="id">
-            INSERT INTO user ( name,no,password,phone,sex,create_time,update_time,isValid
-            ) VALUES (#{name},#{no},#{password},#{phone},#{sex},#{createTime},#{updateTime},#{isValid})
+            INSERT INTO user ( name,no,password,phone,sex,create_time,update_time,isValid,age,role_id
+            ) VALUES (#{name},#{no},#{password},#{phone},#{sex},#{createTime},#{updateTime},#{isValid},#{age},#{roleId})
         </insert>
 
     <update id="userUpdate" parameterType="com.orchard.entity.User">
@@ -38,7 +38,4 @@
         </where>
         order by create_time desc
     </select>
-
-
-
 </mapper>

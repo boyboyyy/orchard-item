@@ -2,7 +2,6 @@ package com.orchard.controller;
 
 import com.orchard.dto.GoodDTO;
 import com.orchard.dto.GoodPageQueryDTO;
-import com.orchard.entity.Goods;
 import com.orchard.result.PageResult;
 import com.orchard.result.Result;
 import com.orchard.service.GoodService;
@@ -12,8 +11,6 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/Goods")
@@ -51,16 +48,16 @@ public class GoodController {
 //        return Result.success();
 //    }
 //
-//    @ApiOperation("货物新增功能")
-//    @PostMapping("/addGood")
-//    public  Result addgoodStyle(@RequestBody GoodDTO goodDTO){
-//        log.info("goodDTO",goodDTO);
-//        goodService.addgood(goodDTO);
-//        return  Result.success();
-//    }
-    @ApiOperation("货物分类删除功能")
+    @ApiOperation("货物新增功能")
+    @PostMapping("/addGoods")
+    public  Result addgoodStyle(@RequestBody GoodDTO goodDTO){
+        log.info("goodDTO",goodDTO);
+        goodService.addgood(goodDTO);
+        return  Result.success();
+    }
+    @ApiOperation("货物删除功能")
     @GetMapping("/deleteGoodsById/{id}")
-    public Result goodStyleDelet(@PathVariable Long id){
+    public Result goodsDelet(@PathVariable Long id){
         log.info("id",id);
         goodService.goodDelet(id);
         return Result.success();

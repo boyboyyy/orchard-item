@@ -5,20 +5,13 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 @Data
-@ApiModel(description = "货物记录的分页数据")
-public class RecordPageQueryDTO implements Serializable {
-    @ApiModelProperty("货物名")
-    //货物姓名
+@ApiModel(description = "地方的分页数据")
+public class OrchardPageQueryDTO implements Serializable {
+    @ApiModelProperty("地方名")
+    //仓库姓名
     private String name;
-    @ApiModelProperty("货物类型名")
-    //货物姓名
-    private Integer goodsType;
-    @ApiModelProperty("仓库名")
-    //货物姓名
-    private Integer storage;
 
     @ApiModelProperty("页码")
     //页码
