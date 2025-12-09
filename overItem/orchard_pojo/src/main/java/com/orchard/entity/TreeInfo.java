@@ -19,6 +19,7 @@ public class TreeInfo implements Serializable {
     private LocalDateTime plantDate;
     private String healthStatus;
     private String remark;
+    private String name;
 
     /**
      * 创建时间

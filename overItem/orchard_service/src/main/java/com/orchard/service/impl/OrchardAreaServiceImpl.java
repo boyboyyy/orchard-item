@@ -2,14 +2,19 @@ package com.orchard.service.impl;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.orchard.context.BaseContext;
+import com.orchard.dto.OrchardDTO;
 import com.orchard.dto.OrchardPageQueryDTO;
 import com.orchard.entity.OrchardArea;
+import com.orchard.entity.Storage;
 import com.orchard.mapper.OrchardAreaMapper;
 import com.orchard.result.PageResult;
 import com.orchard.service.OrchardAreaService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -28,5 +33,30 @@ public class OrchardAreaServiceImpl implements OrchardAreaService {
         long total = page.getTotal();
         List<OrchardArea> orchardAreas = page.getResult();
         return new PageResult(total,orchardAreas);
+    }
+
+    /**
+     * 地域新增
+     *
+     * @param orchardDTO
+     */
+    @Override
+    public void addChardArea(OrchardDTO orchardDTO) {
+        OrchardArea orchardArea = new OrchardArea();
+        BeanUtils.copyProperties(orchardDTO,orchardArea);
+        orchardArea.setCreateTime(LocalDateTime.now());
+        orchardAreaMapper.addChardArea(orchardDTO);
+    }
+
+    /**
+     * 地域修改
+     * @param orchardDTO
+     */
+    @Override
+    public void chardAreaUpdate(OrchardDTO orchardDTO) {
+        OrchardArea orchardArea = new OrchardArea();
+        BeanUtils.copyProperties(orchardDTO,orchardArea);
+        orchardArea.setUpdateTime(LocalDateTime.now());
+        orchardAreaMapper.updateorchardArea(orchardArea);
     }
 }

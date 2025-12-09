@@ -3,9 +3,24 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.orchard.mapper.TreeInfoMapper">
 
-    <select id="treeinfo" resultType="com.orchard.entity.TreeInfo">
-            select *
-            from tree_info
-            order by create_time desc
+    <select id="treeinfo" resultType="com.orchard.vo.TreeinfoVo">
+        SELECT
+        ti.id,
+        ti.name,
+        gt.name as goodsTypeName,
+        oa.name as orchardAreaName,
+        ti.plant_date as plantDate,
+        ti.health_status as healthStatus,
+        ti.remark,
+        ti.create_time
+        FROM tree_info ti
+        LEFT JOIN goodstype gt ON gt.id = ti.type_id
+        LEFT JOIN orchard_area oa ON oa.id = ti.area_id
+        <where>
+            <if test="name != null and name != ''">
+                and ti.name like concat('%',#{name},'%')
+            </if>
+        </where>
+        order by ti.create_time desc
     </select>
 </mapper>

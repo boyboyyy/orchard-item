@@ -28,7 +28,7 @@
             s.name as storage,
             gt.name as goodsType
         FROM goods g
-                 LEFT JOIN goodsType gt ON gt.id = g.goodsType
+                 LEFT JOIN goodstype gt ON gt.id = g.goodsType
                  LEFT JOIN storage s ON s.id = g.storage
         WHERE g.id = 2;
     </select>
@@ -45,7 +45,7 @@
                 g.create_time,
                 g.update_time
         FROM goods g
-        LEFT JOIN goodsType gt ON gt.id = g.goodsType
+        LEFT JOIN goodstype gt ON gt.id = g.goodsType
         LEFT JOIN storage s ON s.id = g.storage
         LEFT JOIN user create_user ON create_user.id = g.create_user
         LEFT JOIN user update_user ON update_user.id = g.update_user

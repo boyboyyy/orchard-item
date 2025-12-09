@@ -1,5 +1,6 @@
-package com.orchard.entity;
+package com.orchard.vo;
 
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,28 +13,18 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrchardArea implements Serializable {
-    /**
-     * 主键
-     */
+@ApiModel(description = "树木数据返回的数据格式")
+public class TreeinfoVo implements Serializable {
     private Integer id;
-
-    /**
-     * 地域名字
-     */
+    private String orchardAreaName;
+    private String goodsTypeName;
+    private LocalDateTime plantDate;
+    private String healthStatus;
+    private String remark;
     private String name;
 
-    /**
-     * 描述
-     */
-    private String description;
     /**
      * 创建时间
      */
     private LocalDateTime createTime;
-    /**
-     * 修改时间
-     */
-    private LocalDateTime updateTime;
-
 }

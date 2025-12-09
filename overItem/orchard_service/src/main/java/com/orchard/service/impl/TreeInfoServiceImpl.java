@@ -7,6 +7,7 @@ import com.orchard.entity.TreeInfo;
 import com.orchard.mapper.TreeInfoMapper;
 import com.orchard.result.PageResult;
 import com.orchard.service.TreeInfoService;
+import com.orchard.vo.TreeinfoVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,9 +25,9 @@ public class TreeInfoServiceImpl implements TreeInfoService {
     @Override
     public PageResult orchardPageQuery(TreeInfoPageQueryDTO treeInfoPageQueryDTO) {
         PageHelper.startPage(treeInfoPageQueryDTO.getPageNumber(),treeInfoPageQueryDTO.getPageSize());
-        Page<TreeInfo> page = treeInfoMapper.treeinfo(treeInfoPageQueryDTO);
+        Page<TreeinfoVo> page = treeInfoMapper.treeinfo(treeInfoPageQueryDTO);
         long total = page.getTotal();
-        List<TreeInfo> result = page.getResult();
+        List<TreeinfoVo> result = page.getResult();
         return new PageResult(total,result);
     }
 }

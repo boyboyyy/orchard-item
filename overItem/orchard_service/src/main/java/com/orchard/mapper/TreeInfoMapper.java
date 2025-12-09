@@ -3,6 +3,7 @@ package com.orchard.mapper;
 import com.github.pagehelper.Page;
 import com.orchard.dto.TreeInfoPageQueryDTO;
 import com.orchard.entity.TreeInfo;
+import com.orchard.vo.TreeinfoVo;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
@@ -12,5 +13,5 @@ public interface TreeInfoMapper {
      * @param treeInfoPageQueryDTO
      * @return
      */
-    Page<TreeInfo> treeinfo(TreeInfoPageQueryDTO treeInfoPageQueryDTO);
+    Page<TreeinfoVo> treeinfo(TreeInfoPageQueryDTO treeInfoPageQueryDTO);
 }

@@ -9,7 +9,9 @@ import java.io.Serializable;
 @ApiModel(description = "树木的分页数据")
 public class TreeInfoPageQueryDTO implements Serializable {
 
-
+    @ApiModelProperty("树木名")
+    //仓库姓名
+    private String name;
     @ApiModelProperty("页码")
     //页码
     private Integer pageNumber;

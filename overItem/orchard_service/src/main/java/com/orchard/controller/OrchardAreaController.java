@@ -1,8 +1,6 @@
 package com.orchard.controller;
 
-import com.orchard.dto.GoodStylePageQueryDTO;
-import com.orchard.dto.OrchardPageQueryDTO;
-import com.orchard.dto.RecordPageQueryDTO;
+import com.orchard.dto.*;
 import com.orchard.result.PageResult;
 import com.orchard.result.Result;
 import com.orchard.service.OrchardAreaService;
@@ -11,9 +9,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/orcharArea")
@@ -37,4 +33,29 @@ public class OrchardAreaController {
         return Result.success(pageResult);
     }
 
+    /**
+     * 地域新增
+     * @param orchardDTO
+     * @return
+     */
+    @ApiOperation("地区新增功能")
+    @PostMapping("/addChard")
+    public  Result addChardArea(@RequestBody OrchardDTO orchardDTO){
+        log.info("orchardDTO",orchardDTO);
+        orchardAreaService.addChardArea(orchardDTO);
+        return  Result.success();
+    }
+
+    /**
+     * 地域信息
+     * @param orchardDTO
+     * @return
+     */
+    @ApiOperation("修改地区信息")
+    @PutMapping("/mod")
+    public Result chardAreaUpdate(@RequestBody OrchardDTO orchardDTO){
+        log.info("地域信息",orchardDTO);
+        orchardAreaService.chardAreaUpdate(orchardDTO);
+        return Result.success();
+    }
 }

@@ -2,6 +2,30 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.orchard.mapper.OrchardAreaMapper">
+    <insert id="addChardArea">
+        insert into orchard_area
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null">name,</if>
+            <if test="description != null">description,</if>
+            <if test="createTime != null">createTime,</if>
+        </trim>
+        values
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null">#{name},</if>
+            <if test="description != null">#{description},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+        <update id="updateorchardArea" parameterType="com.orchard.entity.OrchardArea">
+            update orchard_area
+            <set>
+                <if test="name != null and name != ''">name = #{name},</if>
+                <if test="description != null and description != '' ">description = #{description},</if>
+                <if test="updateTime != null ">update_time = #{updateTime},</if>
+            </set>
+            where id = #{id}
+        </update>
+
 
 
     <select id="orcharArea" resultType="com.orchard.entity.OrchardArea">
