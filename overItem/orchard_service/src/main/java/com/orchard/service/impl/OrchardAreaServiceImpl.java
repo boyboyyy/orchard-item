@@ -59,4 +59,14 @@ public class OrchardAreaServiceImpl implements OrchardAreaService {
         orchardArea.setUpdateTime(LocalDateTime.now());
         orchardAreaMapper.updateorchardArea(orchardArea);
     }
+
+    /**
+     * 返回地区名
+     * @return
+     */
+    @Override
+    public List<OrchardArea> pageAll() {
+
+        return orchardAreaMapper.pageAll();
+    }
 }

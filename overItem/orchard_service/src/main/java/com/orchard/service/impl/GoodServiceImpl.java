@@ -56,28 +56,21 @@ public class GoodServiceImpl implements GoodService {
         return goodsFixVo;
     }
 
+
+
     /**
      * 货物分类修改数据
      * @param goodDTO
      */
-//    @Override
-//    public void goodUpdate(GoodDTO goodDTO) {
-//        //获取仓库的id
-//        Integer storageId =  storageMapper.goodsByName(goodDTO.getStorage());
-//        Integer goodstypeId =  goodStyleMapper.goodStypeIdBygoodName(goodDTO.getGoodsType());
-//
-//        Goods goods = new Goods().builder()
-//                .id(goodDTO.getId())
-//                .name(goodDTO.getName())
-//                .storage(storageId)
-//                .goodsType(goodstypeId)
-//                .createUser(BaseContext.getCurrentId())
-//                .createTime(LocalDateTime.now())
-//                .remark(goodDTO.getRemark())
-//                .count(goodDTO.getCount())
-//                .build();
-//        goodMapper.updateGood(goods);
-//    }
+    @Override
+    public void goodUpdate(GoodDTO goodDTO) {
+        Goods goods = new Goods();
+        //获取仓库的id
+       BeanUtils.copyProperties(goodDTO,goods);
+
+
+        goodMapper.updateGood(goods);
+    }
 
     /**
      * 货物分裂的删除
@@ -97,6 +90,10 @@ public class GoodServiceImpl implements GoodService {
      */
     @Override
     public void addgood(GoodDTO goodDTO) {
-//        goodMapper.addgood(goods);
+        Goods goods = new Goods();
+        BeanUtils.copyProperties(goodDTO,goods);
+        goods.setCreateTime(LocalDateTime.now());
+        goods.setCreateUser(BaseContext.getCurrentId());
+        goodMapper.addgood(goods);
     }
 }

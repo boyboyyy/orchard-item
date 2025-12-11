@@ -25,7 +25,7 @@ public interface GoodMapper {
      * 货物分类的修改
      * @param goods
      */
-//    void updateGood(Goods goods);
+    void updateGood(Goods goods);
 
     /**
      * 通过id查询货物分类
@@ -45,14 +45,14 @@ public interface GoodMapper {
 
 
 
+
     /**
      * 货物新增
      * @param goods
      */
-//    @Insert("insert into goods (name,storage,goodsType,count,remark,create_time,create_user)" + "values" +
-//            "(#{name},#{storage},#{goodsType},#{count},#{remark},#{createTime},#{createUser})")
-//    void addgood(Goods goods);
-
+    @Insert("insert into goods (name,storage,goodsType,count,remark,create_time,create_user)" + "values" +
+            "(#{name},#{storage},#{goodsType},#{count},#{remark},#{createTime},#{createUser})")
+    void addgood(Goods goods);
 
 
 

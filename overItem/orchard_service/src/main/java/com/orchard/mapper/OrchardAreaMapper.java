@@ -6,6 +6,8 @@ import com.orchard.dto.OrchardPageQueryDTO;
 import com.orchard.entity.OrchardArea;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface OrchardAreaMapper {
     /**
@@ -26,4 +28,10 @@ public interface OrchardAreaMapper {
      * @param orchardArea
      */
     void updateorchardArea(OrchardArea orchardArea);
+
+    /**
+     * 返回
+     * @return
+     */
+    List<OrchardArea> pageAll();
 }

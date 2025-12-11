@@ -14,4 +14,10 @@ public interface TreeInfoMapper {
      * @return
      */
     Page<TreeinfoVo> treeinfo(TreeInfoPageQueryDTO treeInfoPageQueryDTO);
+
+    /**
+     * 树木新增功能
+     * @param treeInfo
+     */
+    void addTrees(TreeInfo treeInfo);
 }

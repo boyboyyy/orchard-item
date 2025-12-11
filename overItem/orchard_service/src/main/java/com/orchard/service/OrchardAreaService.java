@@ -3,7 +3,10 @@ package com.orchard.service;
 import com.orchard.dto.OrchardDTO;
 import com.orchard.dto.OrchardPageQueryDTO;
 import com.orchard.dto.RecordDTO;
+import com.orchard.entity.OrchardArea;
 import com.orchard.result.PageResult;
+
+import java.util.List;
 
 public interface OrchardAreaService {
     /**
@@ -25,4 +28,10 @@ public interface OrchardAreaService {
      * @param orchardDTO
      */
     void chardAreaUpdate(OrchardDTO orchardDTO);
+
+    /**
+     * 地区的返回地区名
+     * @return
+     */
+    List<OrchardArea> pageAll();
 }

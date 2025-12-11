@@ -1,6 +1,8 @@
 package com.orchard.controller;
 
 import com.orchard.dto.*;
+import com.orchard.entity.Goodstype;
+import com.orchard.entity.OrchardArea;
 import com.orchard.result.PageResult;
 import com.orchard.result.Result;
 import com.orchard.service.OrchardAreaService;
@@ -10,6 +12,8 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/orcharArea")
@@ -57,5 +61,15 @@ public class OrchardAreaController {
         log.info("地域信息",orchardDTO);
         orchardAreaService.chardAreaUpdate(orchardDTO);
         return Result.success();
+    }
+    /**
+     * 地区信息返回
+     * @return
+     */
+    @ApiOperation("返回所有地区数据")
+    @GetMapping("/list")
+    public Result pageAll(){
+        List<OrchardArea> orchardAreas =  orchardAreaService.pageAll();
+        return Result.success(orchardAreas);
     }
 }

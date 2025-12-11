@@ -2,6 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.orchard.mapper.TreeInfoMapper">
+    <insert id="addTrees">
+        insert into tree_info (area_id,type_id,plant_date,health_status,remark,name)
+        values (#{areaId},#{typeId},#{plantDate},#{healthStatus},#{remark},#{name})
+    </insert>
 
     <select id="treeinfo" resultType="com.orchard.vo.TreeinfoVo">
         SELECT
